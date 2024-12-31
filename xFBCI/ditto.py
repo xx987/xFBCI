@@ -14,7 +14,6 @@ from sklearn.linear_model import LogisticRegression
 def W_k_update(w_k, lr_r, F_k,steps_up,X,w):
     for _ in range(steps_up):
         grads = jax.grad(lambda x: F_k(x,X,w))(w_k)
-        #print(grads,'看看grads1')
         w_k = w_k - lr_r* grads
 
     return w_k
