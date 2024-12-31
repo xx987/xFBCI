@@ -26,7 +26,7 @@ class EPServer:
         new_e = np.array(self.e_global)
         new_l =  np.array(self.l_global)
 
-        new_eg = new_e + 0.2 * sum_e  # 应用阻尼系数 delta 来更新 eta_k
+        new_eg = new_e + 0.2 * sum_e  
         new_lg = new_l + 0.2 * sum_l
 
         return  new_eg, new_lg
